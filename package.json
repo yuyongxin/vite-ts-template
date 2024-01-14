@@ -4,8 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "preinstall": "node ./scripts/preinstall.js",
     "dev": "vite --open",
-    "build": "vue-tsc && vite build",
+    "build:test": "vue-tsc && vite build --mode test",
+    "build:pro": "vue-tsc && vite build --mode production",
     "preview": "vite preview",
     "lint": "npx eslint src/**/*.{js,jsx,vue,ts,tsx}",
     "fix": "npx eslint src/**/*.{js,jsx,vue,ts,tsx} --fix",
@@ -15,8 +17,13 @@
     "commitlint": "commitlint --edit --verbose --config commitlint.config.cjs"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "axios": "^1.6.5",
+    "element-plus": "^2.5.1",
+    "pinia": "^2.1.7",
     "react": "^18.2.0",
-    "vue": "^3.3.11"
+    "vue": "^3.3.11",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
