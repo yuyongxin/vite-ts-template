@@ -11,13 +11,16 @@
     "fix": "npx eslint src/**/*.{js,jsx,vue,ts,tsx} --fix",
     "prettier": "npx prettier src/**/*.{html,vue,ts,js,jsx,tsx} --write",
     "stylelint": "npx stylelint src/**/*.{css,scss,vue} --cache --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commitlint": "commitlint --edit --verbose --config commitlint.config.cjs"
   },
   "dependencies": {
     "react": "^18.2.0",
     "vue": "^3.3.11"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@vitejs/plugin-vue": "^4.5.2",
     "eslint": "^8.56.0",
